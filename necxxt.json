@@ -1,0 +1,7 @@
+{
+    "name": "Singleton",
+    "version": "1.0.0",
+    "description": "Provides a thread safe template to create a Singleton",
+    "author": "Marius Meisenzahl <mariusmeisenzahl@gmail.com>",
+    "license": "MIT"
+}

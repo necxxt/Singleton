@@ -1,0 +1,23 @@
+export module Singleton;
+
+export {
+  template <typename T, typename D = T>
+  class Singleton {
+    friend D;
+
+   public:
+    static T& instance();
+
+   private:
+    Singleton() = default;
+    ~Singleton() = default;
+    Singleton(const Singleton&) = delete;
+    Singleton& operator=(const Singleton&) = delete;
+  };
+
+  template <typename T, typename D>
+  T& Singleton<T, D>::instance() {
+    static D inst;
+    return inst;
+  }
+}
